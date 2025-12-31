@@ -222,11 +222,9 @@ body.countdown-only .hero {
 .photo-front {
   transform: rotate(7deg) translate(10px, -8px);
   z-index: 2;
-  background: linear-gradient(
-    45deg,
-    rgba(244, 201, 122, 0.2),
-    rgba(247, 216, 227, 0.5)
-  );
+  background: linear-gradient(45deg,
+      rgba(244, 201, 122, 0.2),
+      rgba(247, 216, 227, 0.5));
 }
 
 .photo-stack.is-swapped .photo-front {
@@ -411,9 +409,11 @@ body.countdown-only .hero {
     transform: translateY(30vh) rotate(45deg);
     opacity: 0;
   }
+
   10% {
     opacity: 0.6;
   }
+
   100% {
     transform: translateY(-120vh) rotate(45deg);
     opacity: 0;
@@ -424,6 +424,7 @@ body.countdown-only .hero {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -454,5 +455,306 @@ body.countdown-only .hero {
 
   .photo-stack {
     margin: 0 auto;
+  }
+}
+
+/* Clicker Page Styles */
+.clicker-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.clicker-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 24px;
+  transition: transform 0.3s ease;
+}
+
+.clicker-panel:hover {
+  transform: translateY(-5px);
+}
+
+.clicker-desc {
+  color: var(--soft-ink);
+  margin-bottom: 32px;
+}
+
+.click-btn {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  border: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(255, 107, 129, 0.3);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin-bottom: 32px;
+}
+
+.click-btn:active {
+  transform: scale(0.9);
+}
+
+.heart-icon {
+  font-size: 3rem;
+  color: #fff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.counter-display {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#herCount,
+#hisCount {
+  font-family: var(--display-font);
+  font-size: 3.5rem;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  color: var(--soft-ink);
+  opacity: 0.8;
+}
+
+.infinite-display {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.infinite-icon {
+  font-size: 4rem;
+  color: var(--soft-ink);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .clicker-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Playlist Page Styles */
+.playlist-panel {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.song-card {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.05);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.song-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.song-note {
+  font-size: 0.95rem;
+  color: var(--soft-ink);
+  line-height: 1.6;
+  font-style: italic;
+  padding: 0 8px;
+  text-align: left;
+}
+
+.song-note::before {
+  content: "“";
+  font-family: var(--display-font);
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-right: 4px;
+  vertical-align: -6px;
+}
+
+/* Universe Page Styles */
+.universe-body {
+  background: radial-gradient(circle at 50% 120%, #2b1f3a 0%, #0d0814 60%, #06040a 100%);
+  color: #fff;
+  overflow: hidden;
+  /* Prevent scroll */
+}
+
+.universe-body::before {
+  /* Subtle vignette */
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.universe-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  perspective: 1000px;
+}
+
+.star {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.star:hover {
+  transform: scale(2);
+  box-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 40px var(--gold);
+  z-index: 100;
+}
+
+.universe-ui {
+  position: relative;
+  z-index: 20;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  /* Let clicks pass through layout to stars */
+}
+
+.universe-hero {
+  pointer-events: auto;
+  color: #fff;
+}
+
+.universe-hero .eyebrow,
+.universe-hero .subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.glass-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.glass-btn.secondary-btn {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.star-message-container {
+  margin-top: auto;
+  margin-bottom: 10vh;
+  min-height: 100px;
+  max-width: 600px;
+  padding: 0 20px;
+  text-align: center;
+  pointer-events: auto;
+}
+
+.placeholder-text {
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: fadePulse 3s infinite;
+}
+
+
+
+.active-message {
+  font-family: var(--display-font);
+  font-size: 1.8rem;
+  color: var(--gold);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  animation: messageIn 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes fadePulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes messageIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
   }
 }

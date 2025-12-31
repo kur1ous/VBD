@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kisses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="glow"></div>
+    <header class="hero">
+        <p class="eyebrow">LOTS OF KISSES FOR MY BABY</p>
+        <h1 class="title">KISSES</h1>
+        <p class="subtitle">
+        </p>
+        <div class="button-row">
+            <a class="surprise-btn" href="poems.html">Back</a>
+            <a class="surprise-btn" href="playlist.html">Next Gift</a>
+            <a class="surprise-btn secondary-btn" href="index.html">Home</a>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="clicker-layout">
+            <!-- Her Side -->
+            <section class="panel clicker-panel her-side">
+                <h2>From You</h2>
+                <p class="clicker-desc">Click to send a kiss</p>
+                <button id="herClickerBtn" class="click-btn">
+                    <span class="heart-icon">♥</span>
+                </button>
+                <div class="counter-display">
+                    <span id="herCount">0</span>
+                    <span class="label">Kisses Given</span>
+                </div>
+            </section>
+
+            <!-- His Side -->
+            <section class="panel clicker-panel his-side">
+                <h2>From Me</h2>
+                <p class="clicker-desc">HEHEHEHEH TAKE ALLLLLLLLLLLLLLLLLLLLLLLLLLL MY KISSESSS MWUAH</p>
+                <div class="infinite-display">
+                    <span class="infinite-icon">∞</span>
+                </div>
+                <div class="counter-display">
+                    <span id="hisCount">0</span>
+                    <span class="label">Kisses Sent</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
