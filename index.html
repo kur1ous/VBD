@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="glow"></div>
+    <header class="hero">
+      <p class="eyebrow">For the one I love most</p>
+      <h1 class="title">Happy Birthday, <span id="name">Love</span></h1>
+      <p class="subtitle">
+        A tiny corner of the internet, made just for you.
+      </p>
+      <div class="countdown">
+        <div class="countdown-label">Countdown to your day</div>
+        <div id="countdown" class="countdown-time">Loading...</div>
+      </div>
+      <a id="surpriseBtn" class="surprise-btn" href="love.html">
+        Open your surprise
+      </a>
+    </header>
+
+    <main class="content">
+      <section class="panel">
+        <h2>Why you are my favourite</h2>
+        <div class="cards-scroll">
+          <div id="reasons" class="cards-track"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Little moments I love</h2>
+        <div id="moments" class="moments"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Made with love by <span id="fromName">Me</span></p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
