@@ -3,12 +3,12 @@ const config = {
   fromName: "Nirvik Shrestha",
   birthday: "2026-01-01",
   reasons: [
-    "Your laugh makes everything lighter",
-    "You notice the little things",
-    "You make home feel easy",
-    "You are my favorite person",
-    "You are kind even when tired",
-    "You turn ordinary days into long lasting memories",
+    "Your laugh lightens my day.",
+    "You notice the little things.",
+    "You make me feel at home.",
+    "You have eyes that see right through me.",
+    "You are kind even when you are tired.",
+    "You turn everyday into a memory that I will cherish.",
   ],
   moments: [
     "That one call that started everything off.",
