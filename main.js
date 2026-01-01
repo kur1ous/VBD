@@ -18,7 +18,7 @@ const config = {
   songs: [
     {
       id: "6a3PAfOxDpgBv0ZdJuH5Eo",
-      note: "Clsoer than the buttons on your clo o o thes",
+      note: "Closer than the buttons on your clo o o thes",
     },
     {
       id: "17Wks0pgofBbv53Ay7m4Jc",
